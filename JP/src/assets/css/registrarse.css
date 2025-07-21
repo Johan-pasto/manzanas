@@ -1,0 +1,148 @@
+.Registrarsebody {
+  background: linear-gradient(135deg, #1c1c2e, #2a174e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 6%;
+  color: var(--blanco);
+}
+
+.formulario {
+  background: var(--fondo-secundario);
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--morado);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-header {
+  border-left: 4px solid var(--morado);
+  padding-left: 1rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  color: var(--morado-claro);
+  margin: 0;
+}
+
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--gris-claro);
+}
+
+.form-input,
+.form-select {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--morado-claro);
+  background: transparent;
+  color: var(--blanco);
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: var(--morado);
+  outline: none;
+}
+
+.form-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submit-button,
+.back-button {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button {
+  background-color: var(--morado);
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: var(--morado-claro);
+}
+
+.back-button {
+  background: transparent;
+  border: 2px solid var(--morado);
+  color: var(--morado-claro);
+}
+
+.back-button:hover {
+  background: var(--morado);
+  color: white;
+}
+
+/* === SPINNER ANIMACIÓN === */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--morado-claro);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: girar 1s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .Registrarsebody {
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .formulario {
+    padding: 2rem;
+  }
+
+  .form-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}

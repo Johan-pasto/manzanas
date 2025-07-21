@@ -1,0 +1,210 @@
+:root {
+  --primary-purple: #7C3AED;
+  --secondary-purple: #9333EA;
+  --dark-purple: #5B21B6;
+  --light-purple: #DDD6FE;
+  --accent-blue: #2563EB;
+  --accent-pink: #F472B6;
+  --dark-bg: #0B0B1F;
+  --darker-bg: #060616;
+  --card-bg: #1A1A3A;
+  --text-light: #F3F4F6;
+  --text-muted: #A1A1AA;
+  --success-green: #22C55E;
+  --danger-red: #DC2626;
+  --warning-yellow: #EAB308;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(160deg, var(--dark-bg), var(--darker-bg));
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.administrador-main {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.contenedor-header {
+  width: 100%;
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid var(--primary-purple);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.titulo-bienvenida {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, var(--primary-purple), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boton-cerrar {
+  margin-top: 20px;
+  background: linear-gradient(135deg, var(--danger-red), #b91c1c);
+  border: none;
+  padding: 14px 30px;
+  border-radius: 15px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.botones-secciones {
+  width: 100%;
+}
+
+.contenedor-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.boton-seccion {
+  width: 100%;
+  padding: 18px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid var(--secondary-purple);
+  color: var(--light-purple);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.boton-seccion:hover {
+  transform: scale(1.05);
+  background: rgba(147, 51, 234, 0.2);
+}
+
+.boton-seccion.activo {
+  background: linear-gradient(135deg, var(--primary-purple), var(--secondary-purple));
+  color: white;
+}
+
+.seccion {
+  width: 100%;
+}
+
+.seccion-contenido {
+  background: rgba(28, 29, 61, 0.9);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  margin-bottom: 30px;
+}
+
+.titulo-gestion {
+  font-size: 1.8rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--light-purple), var(--accent-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.contenedor-botones-accion {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.boton-accion {
+  padding: 14px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--primary-purple));
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-accion:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.modal-contenido,
+.formulario-edicion {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, rgba(30, 30, 60, 0.95), rgba(15, 15, 35, 0.95));
+  padding: 30px;
+  border-radius: 25px;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.formulario-titulo,
+.modal-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--primary-purple), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.campo-formulario {
+  margin-bottom: 20px;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--primary-purple);
+  color: var(--text-light);
+}
+
+.admin-formulario-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.boton-guardar,
+.boton-cancelar {
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.boton-guardar {
+  background: linear-gradient(135deg, var(--success-green), #059669);
+  color: white;
+}
+
+.boton-cancelar {
+  background: linear-gradient(135deg, var(--text-muted), #4B5563);
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  .titulo-bienvenida {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,231 @@
+.usuario-main {
+  background: linear-gradient(135deg, #100f1f, #1c1231);
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  color: var(--blanco);
+}
+
+.contenedor-usuario {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--fondo-secundario);
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--sombra);
+  padding: 2rem;
+}
+
+/* HEADER */
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--morado);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.titulo-bienvenida {
+  font-size: 1.8rem;
+  color: var(--morado-claro);
+}
+
+.boton-cerrar {
+  background: transparent;
+  border: 2px solid var(--morado);
+  color: var(--morado-claro);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.boton-cerrar:hover {
+  background: var(--morado);
+  color: white;
+}
+
+/* INFO USUARIO */
+.info-usuario {
+  margin-bottom: 2rem;
+}
+
+.titulo-seccion {
+  font-size: 1.4rem;
+  color: var(--morado);
+  margin-bottom: 1rem;
+}
+
+.detalles-usuario {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detalle-usuario {
+  color: var(--gris-claro);
+}
+
+/* TABS DE NAVEGACIÓN */
+.botones-secciones {
+  margin-bottom: 2rem;
+}
+
+.contenedor-botones {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.boton-seccion {
+  background: transparent;
+  border: 2px solid var(--morado-claro);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  color: var(--gris-claro);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.boton-seccion.activo,
+.boton-seccion:hover {
+  background: var(--morado);
+  color: white;
+}
+
+/* SECCIONES */
+.seccion-contenido {
+  padding: 1rem 0;
+}
+
+.usuario-servicios {
+  background: var(--fondo-secundario);
+  border: 1px solid #2b2b3d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px var(--sombra);
+}
+
+.usuario-servicios-titulo {
+  color: var(--morado-claro);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+/* LISTA DE SERVICIOS */
+.usuario-servicios-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.usuario-servicio {
+  background: var(--fondo-principal);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--gris-claro);
+}
+
+.servicio-nombre {
+  color: var(--morado-claro);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.servicio-tipo {
+  font-style: italic;
+  color: var(--gris-claro);
+}
+
+.servicio-descripcion {
+  font-size: 0.9rem;
+}
+
+/* FORMULARIO */
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.campo-formulario-label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--gris-claro);
+}
+
+.campo-formulario-input,
+.campo-formulario-select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--morado-claro);
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+}
+
+.campo-formulario-input:focus,
+.campo-formulario-select:focus {
+  border-color: var(--morado);
+  outline: none;
+}
+
+.formulario-botones {
+  text-align: center;
+}
+
+.boton-guardar {
+  background-color: var(--morado);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton-guardar:hover {
+  background-color: var(--morado-claro);
+}
+
+/* BOTÓN ELIMINAR */
+.boton-accion {
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+/* MENSAJES DE ESTADO */
+.usuario-cargando {
+  color: var(--gris-claro);
+  font-style: italic;
+  padding: 1rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .contenedor-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .contenedor-botones {
+    flex-direction: column;
+  }
+
+  .usuario-servicios {
+    padding: 1rem;
+  }
+}
