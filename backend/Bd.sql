@@ -5,15 +5,7 @@ CREATE DATABASE manzanasxd
     USE manzanasxd
 
 
- SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
 
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 
 
@@ -21,7 +13,7 @@ CREATE TABLE `manzanas` (
   `Id_M` int(11) NOT NULL,
   `NombreManzana` varchar(25) NOT NULL,
   `Dir` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+)
 
 
 INSERT INTO `manzanas` (`Id_M`, `NombreManzana`, `Dir`) VALUES
@@ -34,7 +26,7 @@ INSERT INTO `manzanas` (`Id_M`, `NombreManzana`, `Dir`) VALUES
 CREATE TABLE `m_s` (
   `Id_M1` int(11) NOT NULL,
   `Id_S1` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) 
 
 
 
@@ -52,7 +44,7 @@ CREATE TABLE `servicios` (
   `Id_S` int(11) NOT NULL,
   `NombreServicio` varchar(25) NOT NULL,
   `TipoServicio` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+)
 
 
 
@@ -73,7 +65,7 @@ CREATE TABLE `solicitudes` (
   `Fecha` datetime DEFAULT NULL,
   `Id1` int(11) DEFAULT NULL,
   `CodigoS` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) 
 
 
 
@@ -89,7 +81,7 @@ CREATE TABLE `usuario` (
   `Documento` varchar(50) NOT NULL,
   `Rol` enum('usuario','administrador') NOT NULL DEFAULT 'usuario',
   `Id_M1` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) 
 
 
 
@@ -164,8 +156,5 @@ ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`Id_M1`) REFERENCES `manzanas` (`Id_M`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
 DROP DATABASE manzanasxd;

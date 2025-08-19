@@ -63,6 +63,7 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
 }
 
 .nav-links-container {
@@ -88,6 +89,7 @@ body {
   border-radius: 25px;
   transition: all 0.3s ease;
   text-decoration: none;
+  letter-spacing: 0.3px;
 }
 
 .nav-item .nav-link:hover {
@@ -106,12 +108,16 @@ body {
 }
 
 .auth-link {
-  padding: 0.75rem 1.5rem;
+  padding: 0.9rem 2rem;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  letter-spacing: 0.8px;
+  min-width: 140px;
+  text-align: center;
+  display: inline-block;
 }
 
 .login-btn {
@@ -169,6 +175,7 @@ body {
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   line-height: 1.2;
+  letter-spacing: 0.5px;
 }
 
 .hero-description {
@@ -178,6 +185,7 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  letter-spacing: 0.2px;
 }
 
 .hero-buttons {
@@ -200,6 +208,7 @@ body {
   display: inline-block;
   text-align: center;
   min-width: 180px;
+  letter-spacing: 0.3px;
 }
 
 .btn-primary {
@@ -241,6 +250,7 @@ section {
   color: var(--dark-purple);
   margin-bottom: 1rem;
   position: relative;
+  letter-spacing: 0.3px;
 }
 
 .section-title::after {
