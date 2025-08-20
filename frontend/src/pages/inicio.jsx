@@ -20,9 +20,9 @@ function Inicio() {
     <div className="Iniciobody">
       <Header scrollToSection={scrollToSection} />
       <Hero scrollToSection={scrollToSection} />
-      <Features />
+     
       <Mapa />
-      <Nosotros />
+     
       <Contacto />
       <Footer scrollToSection={scrollToSection} />
     </div>
